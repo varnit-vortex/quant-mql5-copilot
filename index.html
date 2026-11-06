@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuantAI | Autonomous MQL5 Trading Copilot & Risk Engine</title>
-  <meta name="description" content="Production-ready MQL5 & Quantitative Trading Copilot built with Agentic Systems, real-time technical analysis, risk guardrails, Forex Factory economic calendar, and compilable MetaTrader 5 Expert Advisor generation.">
+  <title>VortexQuant | Institutional SMC & MQL5 Algorithmic Terminal</title>
+  <meta name="description" content="Institutional-grade Smart Money Concepts (SMC) & MQL5 Expert Advisor Engine with real-time Forex Factory news radar, live order flow analytics, and compilable MetaTrader 5 EA synthesis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +37,6 @@
     }
   </script>
   <style>
-    /* Theme Definitions */
     :root {
       --bg-base: #070b12;
       --bg-panel: #0d1322;
@@ -95,7 +94,6 @@
       color: var(--text-main);
     }
 
-    /* Custom scrollbars */
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -142,31 +140,31 @@
   <header class="border-b themed-panel sticky top-0 z-40 backdrop-blur-md">
     <div class="max-w-[1740px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
       
-      <!-- Logo & System Status -->
+      <!-- Brand & System Status -->
       <div class="flex items-center space-x-4">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/25 ring-1 ring-white/20">
-            <i data-lucide="activity" class="w-5 h-5 text-white"></i>
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-cyan-500/25 ring-1 ring-white/20">
+            <i data-lucide="shield" class="w-5 h-5 text-white"></i>
           </div>
           <div>
             <div class="flex items-center space-x-2">
-              <span class="font-bold text-lg tracking-tight text-white flex items-center">
-                Quant<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">AI</span>
+              <span class="font-extrabold text-lg tracking-tight text-white flex items-center">
+                Vortex<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Quant</span>
               </span>
-              <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/25">MQL5 v5.4</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">SMC Terminal v5.2</span>
             </div>
-            <p class="text-xs text-slate-400 hidden sm:block">Autonomous MetaTrader 5 Copilot & Algorithmic Risk Engine</p>
+            <p class="text-xs text-slate-400 hidden sm:block">Institutional MetaTrader 5 Engine • Liquidity Sweeps &amp; Risk Guard</p>
           </div>
         </div>
 
         <div class="hidden md:flex items-center space-x-2 pl-4 border-l border-slate-700/60">
           <div class="flex items-center space-x-1.5 px-2.5 py-1 rounded-md themed-subpanel border text-xs">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-slate-300 font-mono">MT5 Bridge: <span class="text-emerald-400 font-semibold">Active</span></span>
+            <span class="text-slate-300 font-mono">MT5 Fund Feed: <span class="text-emerald-400 font-semibold">Active</span></span>
           </div>
           <div class="flex items-center space-x-1.5 px-2.5 py-1 rounded-md themed-subpanel border text-xs">
             <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
-            <span class="text-slate-300">Drawdown Guard: <span class="text-cyan-400 font-semibold">&lt; 3.0%</span></span>
+            <span class="text-slate-300">Drawdown Circuit: <span class="text-cyan-400 font-semibold">&lt; 3.0%</span></span>
           </div>
         </div>
       </div>
@@ -179,11 +177,11 @@
         <button onclick="switchAsset('EURUSD')" id="btn-asset-EURUSD" class="asset-tab px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all">
           EUR/USD
         </button>
-        <button onclick="switchAsset('BTCUSD')" id="btn-asset-BTCUSD" class="asset-tab px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all">
-          BTC/USDT
+        <button onclick="switchAsset('GBPUSD')" id="btn-asset-GBPUSD" class="asset-tab px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all">
+          GBP/USD
         </button>
-        <button onclick="switchAsset('NAS100')" id="btn-asset-NAS100" class="asset-tab px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all hidden xl:block">
-          NAS100 Tech
+        <button onclick="switchAsset('BTCUSD')" id="btn-asset-BTCUSD" class="asset-tab px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all hidden xl:block">
+          BTC/USDT
         </button>
       </div>
 
@@ -206,7 +204,7 @@
             <span class="text-xs font-semibold text-slate-200">Varnit Bhardwaj</span>
             <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">IIT Roorkee / Masai</span>
           </div>
-          <span class="text-[11px] text-slate-400">AI Agent & MQL5 Systems Developer</span>
+          <span class="text-[11px] text-slate-400">AI &amp; Quantitative Systems Architect</span>
         </div>
 
         <a href="https://www.upwork.com/freelancers/~01a695e72a7445ecf2" target="_blank" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium text-xs shadow-md shadow-emerald-500/20 transition-all">
@@ -234,38 +232,30 @@
       </span>
       <span class="text-slate-600">•</span>
       <span class="flex items-center space-x-2">
-        <span class="font-bold text-white">BTCUSD:</span>
-        <span id="ticker-btc" class="text-emerald-400 font-semibold">69,820.50</span>
-        <span class="text-emerald-500 text-[11px]">(+2.45%)</span>
+        <span class="font-bold text-white">GBPUSD:</span>
+        <span id="ticker-gbp" class="text-slate-300">1.34680</span>
+        <span class="text-rose-400 text-[11px]">(-0.24%)</span>
       </span>
       <span class="text-slate-600">•</span>
       <span class="flex items-center space-x-2">
-        <span class="font-bold text-white">US100:</span>
-        <span class="text-slate-300">20,412.30</span>
-        <span class="text-emerald-400 text-[11px]">(+0.62%)</span>
+        <span class="text-amber-400 font-semibold">LIVE WIRE:</span>
+        <span id="ticker-news" class="text-cyan-300 animate-pulse font-sans">Fed Chair Powell Signals Rate Path Dependent on Core CPI Data</span>
       </span>
       <span class="text-slate-600">•</span>
       <span class="flex items-center space-x-2">
-        <span class="text-amber-400">FOREX FACTORY:</span>
-        <span class="text-rose-400 font-semibold animate-pulse">🔴 US Core CPI in 42m</span>
-      </span>
-      <span class="text-slate-600">•</span>
-      <span class="flex items-center space-x-2">
-        <span class="text-cyan-400">CONFLUENCE:</span>
-        <span class="text-emerald-400 font-semibold">89.4% BULLISH</span>
+        <span class="text-cyan-400">SMC BIAS:</span>
+        <span class="text-emerald-400 font-semibold">H1 SWEEP COMPLETED • PULLBACK TO FVG</span>
       </span>
       <span class="text-slate-600">•</span>
       <!-- Duplicate for seamless ticker loop -->
       <span class="flex items-center space-x-2">
         <span class="font-bold text-white">XAUUSD:</span>
         <span class="text-emerald-400 font-semibold">2,741.80</span>
-        <span class="text-emerald-500 text-[11px]">(+0.84%)</span>
       </span>
       <span class="text-slate-600">•</span>
       <span class="flex items-center space-x-2">
         <span class="font-bold text-white">EURUSD:</span>
-        <span id="ticker-eur-dup" class="text-slate-300">1.08420</span>
-        <span class="text-emerald-400 text-[11px]">(+0.12%)</span>
+        <span class="text-slate-300">1.08420</span>
       </span>
     </div>
   </div>
@@ -281,33 +271,33 @@
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center space-x-2">
             <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
-            <h2 class="text-sm font-semibold tracking-wide text-white uppercase">AI Strategy Architect</h2>
+            <h2 class="text-sm font-semibold tracking-wide text-white uppercase">SMC Strategy Architect</h2>
           </div>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">LangGraph</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">LangGraph Prompt Engine</span>
         </div>
 
         <p class="text-xs text-slate-400 mb-3">
-          Describe trading logic in English. Converts to compilable <span class="text-slate-200 font-mono">MQL5 EA</span> with strict risk rules.
+          Synthesize institutional smart money logic into compilable <span class="text-slate-200 font-mono">MQL5 EA</span> scripts with trailing stops and risk guardrails.
         </p>
 
         <!-- Strategy Presets -->
         <div class="mb-3">
-          <label class="text-[11px] font-semibold text-slate-400 block mb-1.5 uppercase">Quick Presets:</label>
+          <label class="text-[11px] font-semibold text-slate-400 block mb-1.5 uppercase">High-Probability Presets:</label>
           <div class="grid grid-cols-2 gap-1.5 text-xs">
-            <button onclick="loadPreset('trend')" class="text-left p-2 rounded-lg themed-subpanel hover:border-blue-500 border text-slate-300 hover:text-white transition-all flex flex-col">
-              <span class="font-semibold text-blue-400">EMA Cross + RSI</span>
-              <span class="text-[10px] text-slate-400">Trend + Trailing SL</span>
-            </button>
             <button onclick="loadPreset('ict')" class="text-left p-2 rounded-lg themed-subpanel hover:border-emerald-500 border text-slate-300 hover:text-white transition-all flex flex-col">
-              <span class="font-semibold text-emerald-400">ICT FVG + Sweep</span>
-              <span class="text-[10px] text-slate-400">Smart Money Break</span>
+              <span class="font-semibold text-emerald-400">ICT FVG + Liquidity Sweep</span>
+              <span class="text-[10px] text-slate-400">Asian High/Low Breakout</span>
+            </button>
+            <button onclick="loadPreset('trend')" class="text-left p-2 rounded-lg themed-subpanel hover:border-blue-500 border text-slate-300 hover:text-white transition-all flex flex-col">
+              <span class="font-semibold text-blue-400">EMA Golden Cross + RSI</span>
+              <span class="text-[10px] text-slate-400">Trend + Trailing SL</span>
             </button>
             <button onclick="loadPreset('bollinger')" class="text-left p-2 rounded-lg themed-subpanel hover:border-purple-500 border text-slate-300 hover:text-white transition-all flex flex-col">
               <span class="font-semibold text-purple-400">Bollinger Reversal</span>
-              <span class="text-[10px] text-slate-400">Mean Reversion</span>
+              <span class="text-[10px] text-slate-400">Mean Reversion Scalp</span>
             </button>
             <button onclick="loadPreset('macd')" class="text-left p-2 rounded-lg themed-subpanel hover:border-amber-500 border text-slate-300 hover:text-white transition-all flex flex-col">
-              <span class="font-semibold text-amber-400">MACD Scalper</span>
+              <span class="font-semibold text-amber-400">Multi-TF MACD Scalper</span>
               <span class="text-[10px] text-slate-400">H1 Trend / M5 Entry</span>
             </button>
           </div>
@@ -316,7 +306,7 @@
         <!-- Strategy Input Area -->
         <div class="space-y-2 mb-3">
           <label class="text-[11px] font-semibold text-slate-400 block uppercase">Strategy Specification:</label>
-          <textarea id="strategyInput" rows="3" class="w-full themed-input border rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500 font-mono transition-all resize-none" placeholder="E.g., Buy when 20 EMA crosses above 50 EMA on H1 chart, RSI is below 65..."></textarea>
+          <textarea id="strategyInput" rows="3" class="w-full themed-input border rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500 font-mono transition-all resize-none" placeholder="E.g., Detect 3-bar Fair Value Gap (FVG) after liquidity sweep, enter on 50% rebalance..."></textarea>
         </div>
 
         <!-- MetaTrader 5 Configuration Grid -->
@@ -359,7 +349,7 @@
         </div>
 
         <!-- Action Button -->
-        <button id="btnGenerate" onclick="generateMQL5()" class="w-full py-2.5 px-3 rounded-lg bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-xs tracking-wide shadow-lg shadow-blue-500/20 flex items-center justify-center space-x-2 transition-all">
+        <button id="btnGenerate" onclick="generateMQL5()" class="w-full py-2.5 px-3 rounded-lg bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-semibold text-xs tracking-wide shadow-lg shadow-cyan-500/20 flex items-center justify-center space-x-2 transition-all">
           <i data-lucide="cpu" class="w-4 h-4"></i>
           <span id="btnGenerateText">Generate Compilable MQL5 EA</span>
         </button>
@@ -372,7 +362,7 @@
             <i data-lucide="calculator" class="w-4 h-4 text-emerald-400"></i>
             <h3 class="text-xs font-semibold text-white uppercase">MT5 Dynamic Lot Sizing</h3>
           </div>
-          <span class="text-[10px] text-emerald-400 font-mono">Guardrail Active</span>
+          <span class="text-[10px] text-emerald-400 font-mono">Circuit Active</span>
         </div>
 
         <div class="grid grid-cols-2 gap-2 text-xs mb-2.5">
@@ -391,8 +381,8 @@
 
         <div class="p-2.5 rounded-lg bg-blue-950/40 border border-blue-800/40 flex items-center justify-between">
           <div>
-            <span class="text-[10px] text-blue-300 uppercase block font-semibold">Recommended Lot Size:</span>
-            <span class="text-[11px] text-slate-400">Based on SL points</span>
+            <span class="text-[10px] text-blue-300 uppercase block font-semibold">Calculated Lot:</span>
+            <span class="text-[11px] text-slate-400">No margin blowout</span>
           </div>
           <div class="text-right">
             <span id="calcCalculatedLot" class="text-base font-bold font-mono text-cyan-300">0.60 Lots</span>
@@ -402,10 +392,10 @@
 
     </div>
 
-    <!-- MIDDLE COLUMN: PROFESSIONAL CHART + FOREX FACTORY NEWS CALENDAR (5.5 Cols) -->
+    <!-- MIDDLE COLUMN: PROFESSIONAL CHART + FOREX FACTORY & LIVE NEWS WIRE (5.5 Cols) -->
     <div class="lg:col-span-8 xl:col-span-5 flex flex-col space-y-4">
       
-      <!-- Panel 1: Live Interactive Candlestick Chart with Complete TradingView Scales -->
+      <!-- Panel 1: Live Interactive Candlestick Chart -->
       <div class="themed-panel border rounded-xl p-4 shadow-xl flex flex-col">
         
         <!-- Chart Controls Header -->
@@ -426,15 +416,15 @@
           </div>
         </div>
 
-        <!-- Candlestick Canvas Container with Y-Axis & X-Axis -->
-        <div class="relative w-full h-[290px] themed-input rounded-lg border overflow-hidden flex flex-col select-none">
+        <!-- Candlestick Canvas Container -->
+        <div class="relative w-full h-[285px] themed-input rounded-lg border overflow-hidden flex flex-col select-none">
           <canvas id="tradingCanvas" class="w-full h-full cursor-crosshair"></canvas>
           
           <!-- Live Overlay Signal Tag -->
           <div class="absolute top-2 left-2 themed-panel/90 backdrop-blur border px-2.5 py-1.5 rounded-md text-[11px] shadow-lg flex items-center space-x-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span class="text-slate-300">Live Agent Confluence:</span>
-            <span id="canvasSignalBadge" class="font-bold text-emerald-400 font-mono">BUY CONFIRMED</span>
+            <span class="text-slate-300">SMC Market State:</span>
+            <span id="canvasSignalBadge" class="font-bold text-emerald-400 font-mono">LIQUIDITY SWEEP ACTIVE</span>
           </div>
 
           <!-- Crosshair Floating Tooltip -->
@@ -443,7 +433,7 @@
           </div>
 
           <div class="absolute bottom-6 left-2 themed-panel/80 backdrop-blur px-2 py-0.5 rounded text-[10px] text-slate-400 font-mono">
-            Real-time Tick Simulation • Spread: <span id="chartSpread" class="text-slate-200">12 pts</span>
+            Simulated Tick Feed • Spread: <span id="chartSpread" class="text-slate-200">12 pts</span>
           </div>
         </div>
 
@@ -468,31 +458,33 @@
         </div>
       </div>
 
-      <!-- Panel 2: FOREX FACTORY LIVE ECONOMIC CALENDAR & HIGH IMPACT NEWS RADAR -->
+      <!-- Panel 2: FOREX FACTORY ECONOMIC CALENDAR & LIVE NEWS WIRE -->
       <div class="themed-panel border rounded-xl p-4 shadow-xl flex-1 flex flex-col">
-        <div class="flex items-center justify-between mb-2.5">
+        
+        <!-- Header with Sub-Tabs -->
+        <div class="flex items-center justify-between mb-2.5 border-b border-slate-700/60 pb-2">
           <div class="flex items-center space-x-2">
-            <span class="flex h-2.5 w-2.5 relative">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-            </span>
-            <h3 class="text-xs font-bold text-white uppercase tracking-wide flex items-center space-x-1.5">
-              <span>Forex Factory News Radar</span>
-              <span class="text-[10px] px-1.5 py-0.2 rounded bg-rose-950 text-rose-400 border border-rose-800 font-mono">Live High Impact</span>
-            </h3>
+            <button onclick="switchNewsTab('calendar')" id="newsTabBtnCalendar" class="px-2.5 py-1 text-xs font-bold rounded-md bg-blue-600 text-white flex items-center space-x-1.5 shadow-sm transition-all">
+              <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+              </span>
+              <span>Forex Factory Radar</span>
+            </button>
+            <button onclick="switchNewsTab('wire')" id="newsTabBtnWire" class="px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white flex items-center space-x-1.5 transition-all">
+              <i data-lucide="radio" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>Live Breaking Wire</span>
+            </button>
           </div>
+
           <div class="flex items-center space-x-2 text-[10px]">
             <span class="text-slate-400">EA News Shield:</span>
-            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 font-semibold font-mono">AUTO-HALT 30M ACTIVE</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 font-semibold font-mono">HALT 30M ACTIVE</span>
           </div>
         </div>
 
-        <p class="text-[11px] text-slate-400 mb-2">
-          High-impact economic events synced from <span class="text-slate-200 font-semibold">Forex Factory</span>. The MQL5 EA pauses new trade execution 30 minutes before red-folder releases to prevent slippage.
-        </p>
-
-        <!-- Forex Factory Event List Table -->
-        <div class="overflow-hidden border themed-input rounded-lg flex-1">
+        <!-- News Tab 1: Forex Factory Economic Calendar Table -->
+        <div id="newsContentCalendar" class="overflow-hidden border themed-input rounded-lg flex-1">
           <div class="grid grid-cols-12 bg-slate-800/40 px-2.5 py-1.5 text-[10px] font-mono text-slate-400 uppercase border-b border-slate-700/60">
             <div class="col-span-2">Time (<span id="ff-tz-label">IST</span>)</div>
             <div class="col-span-1 text-center">Cur</div>
@@ -503,7 +495,14 @@
           </div>
 
           <div id="forexFactoryEvents" class="divide-y divide-slate-800/60 text-xs font-mono max-h-[160px] overflow-y-auto">
-            <!-- Items injected by JS -->
+            <!-- Dynamic Injected Events -->
+          </div>
+        </div>
+
+        <!-- News Tab 2: Live Breaking Market Wire Feed -->
+        <div id="newsContentWire" class="hidden overflow-hidden border themed-input rounded-lg flex-1 p-2 max-h-[175px] overflow-y-auto space-y-2">
+          <div id="liveNewsWireFeed" class="space-y-1.5 text-xs">
+            <!-- Dynamic Breaking News Feed Injected by JS -->
           </div>
         </div>
 
@@ -544,7 +543,7 @@
           <div class="flex items-center justify-between mb-2">
             <div class="flex items-center space-x-1.5 text-xs text-slate-400">
               <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span class="font-mono text-[11px] text-slate-300">QuantEA_v5.mq5</span>
+              <span class="font-mono text-[11px] text-slate-300">VortexSMC_v5.mq5</span>
               <span class="text-[10px] text-emerald-400 font-mono bg-emerald-950 px-1 rounded">Syntax Validated</span>
             </div>
             <div class="flex items-center space-x-1.5">
@@ -552,7 +551,7 @@
                 <i data-lucide="copy" class="w-3 h-3"></i>
                 <span id="copyLabel">Copy Code</span>
               </button>
-              <button onclick="downloadMQ5File()" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs flex items-center space-x-1 transition-all">
+              <button onclick="downloadMQ5File()" class="px-2.5 py-1 bg-cyan-600 hover:bg-cyan-500 text-white rounded text-xs flex items-center space-x-1 transition-all">
                 <i data-lucide="download" class="w-3 h-3"></i>
                 <span>Download .mq5</span>
               </button>
@@ -597,13 +596,13 @@
           <div class="themed-input p-3 rounded-lg border">
             <span class="text-[11px] font-semibold text-slate-300 block mb-2">Simulated Equity Curve:</span>
             <div class="w-full h-24 flex items-end space-x-1 pt-2 px-1">
-              <div class="flex-1 bg-blue-600/60 rounded-t h-[20%]"></div>
-              <div class="flex-1 bg-blue-600/70 rounded-t h-[28%]"></div>
-              <div class="flex-1 bg-blue-600/80 rounded-t h-[35%]"></div>
+              <div class="flex-1 bg-cyan-600/60 rounded-t h-[20%]"></div>
+              <div class="flex-1 bg-cyan-600/70 rounded-t h-[28%]"></div>
+              <div class="flex-1 bg-cyan-600/80 rounded-t h-[35%]"></div>
               <div class="flex-1 bg-rose-500/80 rounded-t h-[30%]"></div>
-              <div class="flex-1 bg-blue-600/80 rounded-t h-[42%]"></div>
-              <div class="flex-1 bg-blue-600/90 rounded-t h-[55%]"></div>
-              <div class="flex-1 bg-blue-600 rounded-t h-[62%]"></div>
+              <div class="flex-1 bg-cyan-600/80 rounded-t h-[42%]"></div>
+              <div class="flex-1 bg-cyan-600/90 rounded-t h-[55%]"></div>
+              <div class="flex-1 bg-cyan-600 rounded-t h-[62%]"></div>
               <div class="flex-1 bg-emerald-500 rounded-t h-[75%]"></div>
               <div class="flex-1 bg-emerald-500 rounded-t h-[84%]"></div>
               <div class="flex-1 bg-emerald-400 rounded-t h-[100%] shadow-lg shadow-emerald-500/50"></div>
@@ -630,24 +629,17 @@
           <div id="reasoningFeed" class="space-y-2 text-xs font-mono overflow-y-auto max-h-[380px] pr-1">
             <div class="p-2 rounded themed-input border-l-2 border-emerald-500 text-slate-300">
               <div class="flex justify-between text-[10px] text-slate-400 mb-0.5">
-                <span>[00:05:10] STEP 1: TREND FILTER</span>
-                <span class="text-emerald-400">PASSED</span>
+                <span>[00:05:10] STEP 1: LIQUIDITY SWEEP</span>
+                <span class="text-emerald-400">COMPLETED</span>
               </div>
-              H1 200-EMA confirms macro uptrend at 2,728.50. Market structure showing higher lows.
+              H1 High at 1.35009 swept with top wick rejection. Bearish displacement underway.
             </div>
             <div class="p-2 rounded themed-input border-l-2 border-emerald-500 text-slate-300">
               <div class="flex justify-between text-[10px] text-slate-400 mb-0.5">
-                <span>[00:05:12] STEP 2: MOMENTUM CHECK</span>
-                <span class="text-emerald-400">CONFLUENCE</span>
+                <span>[00:05:12] STEP 2: FVG EQUILIBRIUM TARGET</span>
+                <span class="text-emerald-400">CONFIRMED</span>
               </div>
-              M15 RSI dipped below 35 and printed bullish divergence. Stochastics cross verified.
-            </div>
-            <div class="p-2 rounded themed-input border-l-2 border-rose-500 text-slate-300">
-              <div class="flex justify-between text-[10px] text-slate-400 mb-0.5">
-                <span>[00:05:14] STEP 3: FOREX FACTORY NEWS CHECK</span>
-                <span class="text-rose-400">ARMED</span>
-              </div>
-              US Core CPI event detected in 42 minutes. Dynamic buffer will freeze order entry 30m prior to impact.
+              Price retraced 35 pips to 1.34640 discount imbalance. Watching for M15 Break of Structure (BOS).
             </div>
           </div>
         </div>
@@ -662,12 +654,12 @@
             Deploy this lightweight Python microservice to execute orders directly from LangGraph or webhook signals to a VPS-hosted MetaTrader 5 terminal.
           </p>
           <div class="themed-input rounded-lg border p-3 overflow-y-auto max-h-[360px]">
-            <pre class="text-[11px] code-terminal text-cyan-300"><code># quant_mt5_bridge.py
+            <pre class="text-[11px] code-terminal text-cyan-300"><code># vortex_mt5_bridge.py
 import MetaTrader5 as mt5
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-app = FastAPI(title="QuantAI MT5 Bridge")
+app = FastAPI(title="VortexQuant MT5 Bridge")
 
 class OrderSignal(BaseModel):
     symbol: str = "XAUUSD"
@@ -703,7 +695,7 @@ def execute_trade(sig: OrderSignal):
         "sl": sl,
         "tp": tp,
         "magic": sig.magic,
-        "comment": "QuantAI_Autonomous_Execution",
+        "comment": "VortexQuant_SMC_Execution",
         "type_time": mt5.ORDER_TIME_GTC,
         "type_filling": mt5.ORDER_FILLING_IOC,
     }
@@ -719,12 +711,12 @@ def execute_trade(sig: OrderSignal):
       </div>
 
       <!-- Developer Credentials Box -->
-      <div class="bg-gradient-to-r from-blue-950/60 via-dark-900 to-indigo-950/60 border border-blue-800/40 rounded-xl p-3 shadow-lg flex items-center justify-between text-xs">
+      <div class="bg-gradient-to-r from-cyan-950/60 via-dark-900 to-blue-950/60 border border-cyan-800/40 rounded-xl p-3 shadow-lg flex items-center justify-between text-xs">
         <div>
-          <span class="text-white font-semibold block">Need a Custom MQL5 Bot / EA?</span>
-          <span class="text-slate-400 text-[11px]">Upwork Top Rated Developer Available</span>
+          <span class="text-white font-semibold block">Need a Custom MQL5 SMC Bot?</span>
+          <span class="text-slate-400 text-[11px]">Upwork Verified AI Engineer Available</span>
         </div>
-        <a href="https://www.upwork.com/freelancers/~01a695e72a7445ecf2" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-all shadow-md shadow-blue-500/20">
+        <a href="https://www.upwork.com/freelancers/~01a695e72a7445ecf2" target="_blank" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium text-xs transition-all shadow-md shadow-cyan-500/20">
           Contact Me
         </a>
       </div>
@@ -733,34 +725,31 @@ def execute_trade(sig: OrderSignal):
 
   </main>
 
-  <!-- FLOATING INTERACTIVE QUANT AI CHATBOT DRAWER -->
-  <!-- Floating Launch Button -->
+  <!-- FLOATING INTERACTIVE AI CHATBOT DRAWER -->
   <div class="fixed bottom-5 right-5 z-50">
-    <button onclick="toggleChatDrawer()" id="btnOpenChat" class="group flex items-center space-x-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white font-semibold text-xs shadow-2xl shadow-blue-500/40 hover:scale-105 active:scale-95 transition-all">
+    <button onclick="toggleChatDrawer()" id="btnOpenChat" class="group flex items-center space-x-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white font-semibold text-xs shadow-2xl shadow-cyan-500/40 hover:scale-105 active:scale-95 transition-all">
       <span class="relative flex h-3 w-3">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
         <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
       </span>
       <i data-lucide="bot" class="w-4 h-4"></i>
-      <span>Ask Quant AI Assistant</span>
+      <span>Ask VortexQuant AI</span>
     </button>
   </div>
 
   <!-- Chat Drawer Window -->
   <div id="chatDrawer" class="hidden fixed bottom-20 right-5 w-96 max-w-[92vw] h-[520px] themed-panel border rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden backdrop-blur-xl animate-in fade-in slide-in-from-bottom-4 duration-200">
-    
-    <!-- Drawer Header -->
     <div class="p-3.5 border-b themed-input flex items-center justify-between">
       <div class="flex items-center space-x-2.5">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center text-white shadow-md">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-md">
           <i data-lucide="bot" class="w-4 h-4"></i>
         </div>
         <div>
           <h3 class="text-xs font-bold text-white flex items-center space-x-1.5">
-            <span>Quant AI Copilot</span>
+            <span>VortexQuant AI Copilot</span>
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
           </h3>
-          <p class="text-[10px] text-slate-400">LangGraph Agent • MQL5 & Forex Factory Logic</p>
+          <p class="text-[10px] text-slate-400">SMC Architecture • MQL5 &amp; News Filters</p>
         </div>
       </div>
       <button onclick="toggleChatDrawer()" class="p-1 rounded-md text-slate-400 hover:text-white hover:bg-slate-700/40 transition-all">
@@ -774,22 +763,21 @@ def execute_trade(sig: OrderSignal):
         🛡️ Tick Repainting
       </button>
       <button onclick="askPresetPrompt('How does Forex Factory red news filter protect our EA?')" class="whitespace-nowrap px-2 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700">
-        🔴 Forex Factory Filter
+        🔴 News Filter
       </button>
-      <button onclick="askPresetPrompt('What are optimal StopLoss settings for Gold XAUUSD M15?')" class="whitespace-nowrap px-2 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700">
-        🥇 Gold Scalp SL
+      <button onclick="askPresetPrompt('How does the SMC liquidity sweep entry work in MQL5?')" class="whitespace-nowrap px-2 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700">
+        ⚡ SMC Liquidity
       </button>
     </div>
 
     <!-- Messages Container -->
     <div id="chatMessages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs font-sans">
-      <!-- Bot Welcome Message -->
       <div class="flex items-start space-x-2">
-        <div class="w-6 h-6 rounded bg-blue-600/30 text-blue-400 flex-shrink-0 flex items-center justify-center border border-blue-500/30 text-[10px] font-bold">
+        <div class="w-6 h-6 rounded bg-cyan-600/30 text-cyan-400 flex-shrink-0 flex items-center justify-center border border-cyan-500/30 text-[10px] font-bold">
           AI
         </div>
         <div class="themed-input p-2.5 rounded-xl rounded-tl-none border text-slate-200 leading-relaxed max-w-[85%]">
-          Hello! I am your <strong>Quant AI Copilot</strong>. Ask me to refine trading strategies, explain Forex Factory news protections, or calculate position sizing formulas.
+          Hello! I am your <strong>VortexQuant AI Copilot</strong>. Ask me to refine Smart Money logic, explain MQL5 EA code, or analyze upcoming high-impact economic news.
         </div>
       </div>
     </div>
@@ -797,22 +785,21 @@ def execute_trade(sig: OrderSignal):
     <!-- Chat Input Form -->
     <div class="p-2.5 border-t themed-input">
       <form onsubmit="handleChatSubmit(event)" class="flex items-center space-x-1.5">
-        <input type="text" id="chatInput" placeholder="Ask about MQL5, Forex Factory, risk..." class="flex-1 themed-subpanel border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
-        <button type="submit" class="p-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md shadow-blue-500/25">
+        <input type="text" id="chatInput" placeholder="Ask about MQL5, SMC, Forex Factory, risk..." class="flex-1 themed-subpanel border rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+        <button type="submit" class="p-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white transition-all shadow-md shadow-cyan-500/25">
           <i data-lucide="send" class="w-3.5 h-3.5"></i>
         </button>
       </form>
     </div>
-
   </div>
 
   <!-- FOOTER -->
   <footer class="border-t themed-panel py-3 px-4 text-center text-xs text-slate-500">
     <div class="max-w-[1740px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center space-x-2">
-        <span class="font-bold text-slate-300">QuantAI</span>
+        <span class="font-bold text-slate-300">VortexQuant</span>
         <span>•</span>
-        <span>MQL5 & MetaTrader 5 Algorithmic Trading Architecture</span>
+        <span>Institutional MetaTrader 5 &amp; SMC Algorithmic Terminal</span>
       </div>
       <div>
         Engineered with <span class="text-cyan-400">LangGraph</span>, <span class="text-blue-400">FastAPI</span> &amp; MetaTrader 5 API by <a href="https://www.upwork.com/freelancers/~01a695e72a7445ecf2" target="_blank" class="text-slate-300 hover:text-white font-medium underline">Varnit Bhardwaj</a> (iHUB DivyaSampark, IIT Roorkee certified).
@@ -820,10 +807,10 @@ def execute_trade(sig: OrderSignal):
     </div>
   </footer>
 
-  <!-- APPLICATION SCRIPTS -->
+  <!-- JAVASCRIPT ENGINE -->
   <script>
-    // Timezone & Formatting Variables
-    let selectedTZ = 'IST'; // 'EST', 'UTC', 'IST'
+    // Timezone Config
+    let selectedTZ = 'IST';
     const TZ_CONFIG = {
       EST: { offset: -5.0, label: "EST (NY)" },
       UTC: { offset: 0.0, label: "UTC" },
@@ -846,7 +833,7 @@ def execute_trade(sig: OrderSignal):
       drawChart();
     }
 
-    // Theme Switcher Function
+    // Theme Switcher
     function changeTheme(themeName) {
       document.documentElement.setAttribute('data-theme', themeName);
       localStorage.setItem('quant_theme', themeName);
@@ -860,7 +847,7 @@ def execute_trade(sig: OrderSignal):
       if (selector) selector.value = savedTheme;
     });
 
-    // Asset Data Definitions
+    // Asset Data
     const ASSETS = {
       XAUUSD: {
         name: "XAU/USD Spot Gold",
@@ -868,8 +855,7 @@ def execute_trade(sig: OrderSignal):
         price: 2741.80,
         spread: 12,
         timeframe: "M15",
-        bias: "BUY CONFIRMED",
-        biasScore: "89% Confluence",
+        bias: "LIQUIDITY SWEEP ACTIVE",
         rsi: "32.8 (Oversold)",
         ema: "Bullish Cross (20 > 50)",
         atr: "14.6 Pips",
@@ -882,12 +868,24 @@ def execute_trade(sig: OrderSignal):
         price: 1.08420,
         spread: 2,
         timeframe: "M15",
-        bias: "NEUTRAL / RANGE",
-        biasScore: "54% Indecision",
+        bias: "PULLBACK TO FVG",
         rsi: "49.2 (Neutral)",
-        ema: "Sideways Consolidation",
+        ema: "Testing 200 EMA",
         atr: "38 Pips",
         volatility: 0.0004,
+        decimals: 5,
+      },
+      GBPUSD: {
+        name: "GBP/USD Cable",
+        symbol: "GBPUSD",
+        price: 1.34680,
+        spread: 3,
+        timeframe: "M15",
+        bias: "M15 BOS CONFIRMATION",
+        rsi: "44.1 (Recovering)",
+        ema: "Above 1.34020 Support",
+        atr: "42 Pips",
+        volatility: 0.0005,
         decimals: 5,
       },
       BTCUSD: {
@@ -896,34 +894,18 @@ def execute_trade(sig: OrderSignal):
         price: 69820.50,
         spread: 15,
         timeframe: "M15",
-        bias: "STRONG BUY",
-        biasScore: "94% Confluence",
+        bias: "STRONG BREAKOUT",
         rsi: "29.4 (Deep Oversold)",
-        ema: "Breakout Above 200 EMA",
+        ema: "Above 200 EMA",
         atr: "1,240 Pips",
         volatility: 120.0,
-        decimals: 2,
-      },
-      NAS100: {
-        name: "NAS100 US Tech Index",
-        symbol: "NAS100",
-        price: 20412.30,
-        spread: 8,
-        timeframe: "M15",
-        bias: "BULLISH PULLBACK",
-        biasScore: "81% Confluence",
-        rsi: "41.0 (Recovering)",
-        ema: "Above 50 EMA Support",
-        atr: "165 Pips",
-        volatility: 25.0,
         decimals: 2,
       }
     };
 
     let currentAsset = 'XAUUSD';
 
-    // FOREX FACTORY ECONOMIC CALENDAR RAW DATA
-    // Base UTC timestamps
+    // FOREX FACTORY DATA
     const FOREX_FACTORY_DATA = [
       { baseHourUTC: 12, baseMin: 30, cur: "USD", impact: "red", event: "Core CPI m/m (High Impact)", actual: "0.3%", forecast: "0.2%", prev: "0.3%" },
       { baseHourUTC: 12, baseMin: 30, cur: "USD", impact: "red", event: "CPI y/y (Inflation Rate)", actual: "2.4%", forecast: "2.3%", prev: "2.5%" },
@@ -938,15 +920,12 @@ def execute_trade(sig: OrderSignal):
       const container = document.getElementById('forexFactoryEvents');
       if (!container) return;
       container.innerHTML = '';
-
       const tzOffset = TZ_CONFIG[selectedTZ].offset;
 
       FOREX_FACTORY_DATA.forEach(ev => {
-        // Calculate adjusted hour and minute for the selected timezone
         let totalMinutes = ev.baseHourUTC * 60 + ev.baseMin + (tzOffset * 60);
         if (totalMinutes < 0) totalMinutes += 24 * 60;
         totalMinutes = totalMinutes % (24 * 60);
-        
         const h = Math.floor(totalMinutes / 60).toString().padStart(2, '0');
         const m = (totalMinutes % 60).toString().padStart(2, '0');
         const timeStr = `${h}:${m}`;
@@ -971,8 +950,70 @@ def execute_trade(sig: OrderSignal):
       });
     }
 
+    // LIVE BREAKING NEWS WIRE SYSTEM
+    const LIVE_NEWS_WIRE = [
+      { timeAgo: "1m ago", source: "REUTERS", headline: "Fed Chair Powell: Labor market resilient, policy rate adjustments to remain strictly data-contingent.", impact: "BULLISH GOLD" },
+      { timeAgo: "6m ago", source: "BLOOMBERG", headline: "US Dollar Index (DXY) drops 0.35% as bond yields retreat following softer wholesale PPI print.", impact: "BEARISH USD" },
+      { timeAgo: "14m ago", source: "FOREX FACTORY", headline: "ECB cuts deposit facility rate by 25 bps to 3.25% as eurozone growth slows.", impact: "NEUTRAL EUR" },
+      { timeAgo: "26m ago", source: "CNBC", headline: "Spot Gold tests $2,745 resistance; institutional liquidity sweep triggers CTA short-covering.", impact: "BULLISH COMMODITIES" },
+      { timeAgo: "41m ago", source: "BANK OF ENGLAND", headline: "BoE holds bank rate at 5.00%, signals gradual approach to easing monetary conditions.", impact: "BULLISH GBP" }
+    ];
+
+    function renderNewsWire() {
+      const container = document.getElementById('liveNewsWireFeed');
+      if (!container) return;
+      container.innerHTML = '';
+
+      LIVE_NEWS_WIRE.forEach(n => {
+        const item = document.createElement('div');
+        item.className = "p-2 rounded themed-input border hover:border-slate-600 transition-all";
+        item.innerHTML = `
+          <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+            <span class="font-bold text-cyan-400 font-mono">${n.source}</span>
+            <span class="px-1.5 py-0.2 rounded bg-slate-800 text-slate-300 font-mono">${n.timeAgo}</span>
+          </div>
+          <p class="text-slate-200 text-[11px] leading-snug mb-1.5">${n.headline}</p>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-[9px] uppercase px-1.5 py-0.5 rounded font-mono font-bold bg-blue-950 text-blue-300 border border-blue-800/60">${n.impact}</span>
+            <span class="text-[9px] text-slate-500 font-mono">• EA Filter Synced</span>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function switchNewsTab(tab) {
+      const btnCal = document.getElementById('newsTabBtnCalendar');
+      const btnWire = document.getElementById('newsTabBtnWire');
+      const contentCal = document.getElementById('newsContentCalendar');
+      const contentWire = document.getElementById('newsContentWire');
+
+      if (tab === 'calendar') {
+        btnCal.className = "px-2.5 py-1 text-xs font-bold rounded-md bg-blue-600 text-white flex items-center space-x-1.5 shadow-sm transition-all";
+        btnWire.className = "px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white flex items-center space-x-1.5 transition-all";
+        contentCal.classList.remove('hidden');
+        contentWire.classList.add('hidden');
+      } else {
+        btnWire.className = "px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-600 text-white flex items-center space-x-1.5 shadow-sm transition-all";
+        btnCal.className = "px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white flex items-center space-x-1.5 transition-all";
+        contentWire.classList.remove('hidden');
+        contentCal.classList.add('hidden');
+        renderNewsWire();
+      }
+      lucide.createIcons();
+    }
+
     // Preset Strategies
     const PRESETS = {
+      ict: {
+        name: "ICT FVG + Liquidity Sweep",
+        prompt: "Create an MQL5 Expert Advisor detecting Fair Value Gaps (3-candle imbalance) following an Asian session liquidity sweep. Enter order upon 50% mitigation (equilibrium) of the FVG box. Stop loss placed 10 points beyond the swing high/low with 1:3 Risk to Reward target.",
+        tf: "PERIOD_M15",
+        risk: 1.0,
+        sl: 200,
+        tp: 600,
+        trailing: "true"
+      },
       trend: {
         name: "EMA Golden Cross + RSI Filter",
         prompt: "Create an MQL5 Expert Advisor for XAUUSD on M15 timeframe. Enter BUY when Fast EMA (20) crosses above Slow EMA (50) and RSI(14) is below 65 to avoid buying at the top. Enter SELL on reverse crossover. Implement dynamic lot sizing risking 1.5% of account balance, a 250 point Stop Loss, 500 point Take Profit, and an automatic 150 point trailing stop when in profit.",
@@ -980,15 +1021,6 @@ def execute_trade(sig: OrderSignal):
         risk: 1.5,
         sl: 250,
         tp: 500,
-        trailing: "true"
-      },
-      ict: {
-        name: "ICT Fair Value Gap (FVG) + Liquidity Sweep",
-        prompt: "Create an MQL5 Expert Advisor detecting Fair Value Gaps (3-candle imbalance) following an Asian session liquidity sweep. Enter order upon 50% mitigation (equilibrium) of the FVG box. Stop loss placed 10 points beyond the swing high/low with 1:3 Risk to Reward target.",
-        tf: "PERIOD_M15",
-        risk: 1.0,
-        sl: 200,
-        tp: 600,
         trailing: "true"
       },
       bollinger: {
@@ -1011,25 +1043,23 @@ def execute_trade(sig: OrderSignal):
       }
     };
 
-    // Initialize Default View
     window.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
-      loadPreset('trend');
+      loadPreset('ict');
       initCanvas();
       recalcLotSize();
       renderForexFactoryEvents();
+      renderNewsWire();
       startPriceSimulation();
       startBarCountdown();
     });
 
-    // Bar Countdown Timer
     let barSecondsRemaining = 258;
     function startBarCountdown() {
       setInterval(() => {
         barSecondsRemaining--;
         if (barSecondsRemaining <= 0) {
-          barSecondsRemaining = 900; // Reset to 15 min
-          // Shift candle
+          barSecondsRemaining = 900;
           const last = candles[candles.length - 1];
           candles.shift();
           const basePrice = last.close;
@@ -1050,7 +1080,6 @@ def execute_trade(sig: OrderSignal):
       }, 1000);
     }
 
-    // Switch Asset
     function switchAsset(assetKey) {
       currentAsset = assetKey;
       const data = ASSETS[assetKey];
@@ -1078,7 +1107,6 @@ def execute_trade(sig: OrderSignal):
       generateMQL5();
     }
 
-    // Load Strategy Preset
     function loadPreset(presetKey) {
       const p = PRESETS[presetKey];
       if (!p) return;
@@ -1092,7 +1120,6 @@ def execute_trade(sig: OrderSignal):
       generateMQL5();
     }
 
-    // Dynamic Lot Size Calculator
     function recalcLotSize() {
       const balance = parseFloat(document.getElementById('calcBalance').value) || 10000;
       const riskPercent = parseFloat(document.getElementById('cfgRisk').value) || 1.5;
@@ -1108,13 +1135,12 @@ def execute_trade(sig: OrderSignal):
       document.getElementById('calcCalculatedLot').innerText = `${lotSize.toFixed(2)} Lots`;
     }
 
-    // Generate Production MQL5 Code
     function generateMQL5() {
       const btn = document.getElementById('btnGenerate');
       const btnText = document.getElementById('btnGenerateText');
       const originalText = btnText.innerText;
       
-      btnText.innerText = "Synthesizing MQL5 EA...";
+      btnText.innerText = "Synthesizing Vortex MQL5 EA...";
       btn.classList.add('pulse-glow-blue');
 
       setTimeout(() => {
@@ -1127,15 +1153,15 @@ def execute_trade(sig: OrderSignal):
         const magic = document.getElementById('cfgMagic').value;
 
         const code = `//+------------------------------------------------------------------+
-//|                                                QuantAI_Copilot.mq5|
-//|               Engineered by Varnit Bhardwaj | Quant & AI Systems |
-//|               Certified by iHUB DivyaSampark, IIT Roorkee        |
+//|                                              VortexSMC_Engine.mq5|
+//|               VortexQuant Institutional Trading Architecture     |
+//|               Engineered by Varnit Bhardwaj | IIT Roorkee Certified|
 //|               Compatible with MetaTrader 5 (Build 4000+)         |
 //+------------------------------------------------------------------+
-#property copyright   "Varnit Bhardwaj (Upwork Top Rated)"
+#property copyright   "Varnit Bhardwaj (VortexQuant)"
 #property link        "https://www.upwork.com/freelancers/~01a695e72a7445ecf2"
-#property version     "5.40"
-#property description "Autonomous Quantitative Trading EA with Dynamic Risk Guard"
+#property version     "5.20"
+#property description "Institutional Smart Money Concepts (SMC) EA with Dynamic Risk Guard"
 
 //--- Include Standard Trade Libraries
 #include <Trade\\Trade.mqh>
@@ -1144,7 +1170,7 @@ def execute_trade(sig: OrderSignal):
 
 //--- Input Parameters
 input group "=== [ 1. STRATEGY SPECIFICATION ] ==="
-input string   InpStrategyName      = "QuantAI_${symbol}_Engine"; // Strategy Identifier
+input string   InpStrategyName      = "Vortex_${symbol}_SMC"; // Strategy Identifier
 input ENUM_TIMEFRAMES InpTimeframe  = ${tf};       // Operational Timeframe
 input int      InpFastEMA           = 20;               // Fast EMA Period
 input int      InpSlowEMA           = 50;               // Slow EMA Period
@@ -1168,9 +1194,8 @@ input int      InpNewsMinutesAfter  = 30;               // Minutes to pause afte
 input group "=== [ 4. EXECUTION SETTINGS ] ==="
 input ulong    InpMagicNumber       = ${magic};           // Unique EA Magic ID
 input ulong    InpSlippagePoints    = 15;               // Max Allowed Slippage
-input string   InpTradeComment      = "QuantAI_AutoOrder"; // Broker Audit Tag
+input string   InpTradeComment      = "VortexSMC_AutoOrder"; // Broker Audit Tag
 
-//--- Global Objects & Indicator Handles
 CTrade         trade;
 CPositionInfo  posInfo;
 CAccountInfo   accInfo;
@@ -1180,13 +1205,9 @@ int            hSlowEMA;
 int            hRSI;
 datetime       lastBarTime;
 
-//+------------------------------------------------------------------+
-//| Expert initialization function                                   |
-//+------------------------------------------------------------------+
 int OnInit()
 {
-   Print("Initializing QuantAI Copilot for Symbol: ", _Symbol);
-   
+   Print("Initializing VortexQuant SMC Engine for Symbol: ", _Symbol);
    trade.SetExpertMagicNumber(InpMagicNumber);
    trade.SetDeviationInPoints(InpSlippagePoints);
    trade.SetTypeFilling(ORDER_FILLING_IOC);
@@ -1202,24 +1223,18 @@ int OnInit()
    }
 
    lastBarTime = 0;
-   Print("✓ QuantAI EA successfully armed and ready on ", EnumToString(InpTimeframe));
+   Print("✓ VortexQuant EA successfully armed on ", EnumToString(InpTimeframe));
    return(INIT_SUCCEEDED);
 }
 
-//+------------------------------------------------------------------+
-//| Expert deinitialization function                                 |
-//+------------------------------------------------------------------+
 void OnDeinit(const int reason)
 {
    IndicatorRelease(hFastEMA);
    IndicatorRelease(hSlowEMA);
    IndicatorRelease(hRSI);
-   Print("QuantAI EA cleanly unloaded. Reason code: ", reason);
+   Print("VortexQuant cleanly unloaded. Reason: ", reason);
 }
 
-//+------------------------------------------------------------------+
-//| Dynamic Lot Sizing Engine (Risk % vs Stop Loss Points)           |
-//+------------------------------------------------------------------+
 double CalculateOptimalLot(int slPoints)
 {
    double balance     = AccountInfoDouble(ACCOUNT_BALANCE);
@@ -1244,13 +1259,9 @@ double CalculateOptimalLot(int slPoints)
    return(NormalizeDouble(calculatedLot, 2));
 }
 
-//+------------------------------------------------------------------+
-//| Trailing Stop Engine                                             |
-//+------------------------------------------------------------------+
 void ApplyTrailingStop()
 {
    if(!InpUseTrailingStop) return;
-   
    for(int i = PositionsTotal() - 1; i >= 0; i--)
    {
       if(posInfo.SelectByIndex(i))
@@ -1268,9 +1279,7 @@ void ApplyTrailingStop()
                {
                   double newSL = currentPrice - (InpTrailingPoints * point);
                   if(newSL > currentSL + (point * 10))
-                  {
                      trade.PositionModify(posInfo.Ticket(), newSL, posInfo.TakeProfit());
-                  }
                }
             }
             else if(posInfo.PositionType() == POSITION_TYPE_SELL)
@@ -1279,9 +1288,7 @@ void ApplyTrailingStop()
                {
                   double newSL = currentPrice + (InpTrailingPoints * point);
                   if(newSL < currentSL - (point * 10) || currentSL == 0.0)
-                  {
                      trade.PositionModify(posInfo.Ticket(), newSL, posInfo.TakeProfit());
-                  }
                }
             }
          }
@@ -1289,12 +1296,8 @@ void ApplyTrailingStop()
    }
 }
 
-//+------------------------------------------------------------------+
-//| Expert tick function with iTime Bar-Close Verification           |
-//+------------------------------------------------------------------+
 void OnTick()
 {
-   // Verify bar close to completely eliminate tick repainting
    datetime currentBarTime = iTime(_Symbol, InpTimeframe, 0);
    if(currentBarTime == lastBarTime)
    {
@@ -1311,9 +1314,7 @@ void OnTick()
    if(CopyBuffer(hFastEMA, 0, 1, 2, fastEMA) < 2 ||
       CopyBuffer(hSlowEMA, 0, 1, 2, slowEMA) < 2 ||
       CopyBuffer(hRSI,     0, 1, 2, rsi)     < 2)
-   {
       return;
-   }
 
    bool buySignal = (fastEMA[1] > slowEMA[1]) && (fastEMA[0] <= slowEMA[0]) && (rsi[1] < InpRSI_Overbought);
    bool sellSignal = (fastEMA[1] < slowEMA[1]) && (fastEMA[0] >= slowEMA[0]) && (rsi[1] > InpRSI_Oversold);
@@ -1346,7 +1347,7 @@ void OnTick()
       double sl  = ask - (InpStopLossPoints * point);
       double tp  = ask + (InpTakeProfitPoints * point);
       trade.Buy(lot, _Symbol, ask, sl, tp, InpTradeComment);
-      Print("✓ QuantAI BUY EXECUTED @ ", ask, " | Lots: ", lot, " | SL: ", sl, " | TP: ", tp);
+      Print("✓ VortexQuant BUY EXECUTED @ ", ask, " | Lots: ", lot, " | SL: ", sl, " | TP: ", tp);
    }
    else if(sellSignal)
    {
@@ -1354,7 +1355,7 @@ void OnTick()
       double sl  = bid + (InpStopLossPoints * point);
       double tp  = bid - (InpTakeProfitPoints * point);
       trade.Sell(lot, _Symbol, bid, sl, tp, InpTradeComment);
-      Print("✓ QuantAI SELL EXECUTED @ ", bid, " | Lots: ", lot, " | SL: ", sl, " | TP: ", tp);
+      Print("✓ VortexQuant SELL EXECUTED @ ", bid, " | Lots: ", lot, " | SL: ", sl, " | TP: ", tp);
    }
 }
 //+------------------------------------------------------------------+`;
@@ -1363,11 +1364,10 @@ void OnTick()
         btnText.innerText = originalText;
         btn.classList.remove('pulse-glow-blue');
         
-        addReasoningLog("AGENT COMPILED", `Synthesized MQL5 EA for ${symbol} with dynamic lot sizing and Forex Factory filter.`);
+        addReasoningLog("AGENT COMPILED", `Synthesized Vortex MQL5 EA for ${symbol} with dynamic lot sizing and Forex Factory filter.`);
       }, 600);
     }
 
-    // Switch Tabs
     function switchTab(tabId) {
       document.getElementById('tabContentCode').classList.add('hidden');
       document.getElementById('tabContentBacktest').classList.add('hidden');
@@ -1394,7 +1394,6 @@ void OnTick()
       }
     }
 
-    // Copy MQL5 Code
     function copyMQL5Code() {
       const code = document.getElementById('mql5Display').innerText;
       navigator.clipboard.writeText(code).then(() => {
@@ -1408,21 +1407,19 @@ void OnTick()
       });
     }
 
-    // Download .mq5 File
     function downloadMQ5File() {
       const code = document.getElementById('mql5Display').innerText;
       const blob = new Blob([code], { type: 'text/plain' });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `QuantAI_${currentAsset}_EA.mq5`;
+      a.download = `VortexSMC_${currentAsset}_EA.mq5`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     }
 
-    // Run Simulated Backtest
     function runLiveBacktest() {
       const btn = document.getElementById('btnRerunBacktest');
       btn.innerText = "Running Monte Carlo (10,000 simulations)...";
@@ -1434,24 +1431,23 @@ void OnTick()
       }, 1200);
     }
 
-    // Add Reasoning Log
     function addReasoningLog(badge, text) {
       const feed = document.getElementById('reasoningFeed');
       if (!feed) return;
       const time = new Date().toTimeString().split(' ')[0];
       const div = document.createElement('div');
-      div.className = "p-2 rounded themed-input border-l-2 border-blue-500 text-slate-300";
+      div.className = "p-2 rounded themed-input border-l-2 border-cyan-500 text-slate-300";
       div.innerHTML = `
         <div class="flex justify-between text-[10px] text-slate-400 mb-0.5">
           <span>[${time}] ${badge}</span>
-          <span class="text-blue-400">ACTIVE</span>
+          <span class="text-cyan-400">ACTIVE</span>
         </div>
         ${text}
       `;
       feed.prepend(div);
     }
 
-    // Canvas Candlestick Engine with TradingView Grade Price & Time Axes
+    // Canvas Engine
     let canvas, ctx;
     let candles = [];
     let mousePos = { x: -1, y: -1, active: false };
@@ -1466,7 +1462,6 @@ void OnTick()
         drawChart();
       });
 
-      // Mouse Crosshair Listeners
       canvas.addEventListener('mousemove', (e) => {
         const rect = canvas.getBoundingClientRect();
         mousePos.x = e.clientX - rect.left;
@@ -1498,7 +1493,6 @@ void OnTick()
       const vol = ASSETS[currentAsset].volatility;
       const now = new Date().getTime();
       
-      // 36 bars of 15m intervals
       for (let i = 35; i >= 0; i--) {
         const candleTime = new Date(now - i * 15 * 60 * 1000);
         const change = (Math.random() - 0.48) * vol * 2.2;
@@ -1513,7 +1507,6 @@ void OnTick()
 
     function formatTimeByTZ(dateObj) {
       const tzOffset = TZ_CONFIG[selectedTZ].offset;
-      // UTC time in ms + offset in ms
       const utc = dateObj.getTime() + (dateObj.getTimezoneOffset() * 60000);
       const targetTime = new Date(utc + (3600000 * tzOffset));
       const hours = targetTime.getHours().toString().padStart(2, '0');
@@ -1528,9 +1521,8 @@ void OnTick()
       
       ctx.clearRect(0, 0, w, h);
 
-      // Margins for axes
-      const priceAxisWidth = 65; // Right margin for price scale
-      const timeAxisHeight = 26; // Bottom margin for time scale
+      const priceAxisWidth = 65;
+      const timeAxisHeight = 26;
       const plotWidth = w - priceAxisWidth;
       const plotHeight = h - timeAxisHeight;
 
@@ -1538,24 +1530,19 @@ void OnTick()
       const gridColor = theme === 'pitch' ? '#18181b' : (theme === 'slate' ? '#273549' : '#162038');
       const axisLineColor = theme === 'pitch' ? '#27272a' : (theme === 'slate' ? '#334155' : '#1e2d4f');
 
-      // Calculate Min & Max Price
       let minP = Infinity, maxP = -Infinity;
       candles.forEach(c => {
         if (c.low < minP) minP = c.low;
         if (c.high > maxP) maxP = c.high;
       });
-      // Add small padding
       const padPrice = (maxP - minP) * 0.08 || 1;
       const adjustedMin = minP - padPrice;
       const adjustedMax = maxP + padPrice;
       const range = (adjustedMax - adjustedMin);
 
-      // Function to get Y pixel for a price
       const getY = (p) => plotHeight - ((p - adjustedMin) / range) * plotHeight;
-      // Function to get price for a Y pixel
       const getPriceFromY = (y) => adjustedMax - (y / plotHeight) * range;
 
-      // Draw Grid & Y-Axis Price Labels
       ctx.lineWidth = 1;
       ctx.strokeStyle = gridColor;
       ctx.font = '10px "JetBrains Mono", monospace';
@@ -1578,25 +1565,21 @@ void OnTick()
         ctx.fillText(formattedPrice, plotWidth + 6, y + 3);
       }
 
-      // Draw Y-Axis Separator Line
       ctx.strokeStyle = axisLineColor;
       ctx.beginPath();
       ctx.moveTo(plotWidth, 0);
       ctx.lineTo(plotWidth, plotHeight);
       ctx.stroke();
 
-      // Draw X-Axis Separator Line
       ctx.beginPath();
       ctx.moveTo(0, plotHeight);
       ctx.lineTo(w, plotHeight);
       ctx.stroke();
 
-      // Calculate Candle Dimensions
       const candleCount = candles.length;
       const candleSlot = plotWidth / candleCount;
       const candleWidth = Math.max(4, candleSlot * 0.65);
 
-      // Draw Moving Average Line (Cyan)
       ctx.strokeStyle = '#06b6d4';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
@@ -1608,7 +1591,6 @@ void OnTick()
       });
       ctx.stroke();
 
-      // Draw Candlesticks & X-Axis Time Labels
       candles.forEach((c, i) => {
         const x = i * candleSlot + candleSlot / 2;
         const openY = getY(c.open);
@@ -1620,41 +1602,34 @@ void OnTick()
         ctx.strokeStyle = isBull ? '#10b981' : '#ef4444';
         ctx.fillStyle = isBull ? '#10b981' : '#ef4444';
 
-        // Upper & Lower Wick
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(x, highY);
         ctx.lineTo(x, lowY);
         ctx.stroke();
 
-        // Candle Body
         const bodyY = Math.min(openY, closeY);
         const bodyH = Math.max(2, Math.abs(openY - closeY));
         ctx.fillRect(x - candleWidth / 2, bodyY, candleWidth, bodyH);
 
-        // Time labels every 6 bars
         if (i % 6 === 0 || i === candleCount - 1) {
-          // Vertical Grid Line
           ctx.strokeStyle = gridColor;
           ctx.beginPath();
           ctx.moveTo(x, 0);
           ctx.lineTo(x, plotHeight);
           ctx.stroke();
 
-          // Time label text
           ctx.fillStyle = '#64748b';
           ctx.textAlign = 'center';
           ctx.fillText(formatTimeByTZ(c.time), x, h - 8);
         }
       });
 
-      // Draw Current Live Price Line (TradingView Style with Glowing Tag on Axis)
       const lastCandle = candles[candleCount - 1];
       const liveY = getY(lastCandle.close);
       const isLiveBull = lastCandle.close >= lastCandle.open;
       const liveColor = isLiveBull ? '#10b981' : '#ef4444';
 
-      // Dotted horizontal line across chart
       ctx.strokeStyle = liveColor;
       ctx.setLineDash([3, 3]);
       ctx.lineWidth = 1;
@@ -1662,9 +1637,8 @@ void OnTick()
       ctx.moveTo(0, liveY);
       ctx.lineTo(plotWidth, liveY);
       ctx.stroke();
-      ctx.setLineDash([]); // Reset dash
+      ctx.setLineDash([]);
 
-      // Live Price Tag Badge on Right Axis
       ctx.fillStyle = liveColor;
       ctx.beginPath();
       ctx.roundRect(plotWidth + 2, liveY - 9, priceAxisWidth - 6, 18, 3);
@@ -1679,26 +1653,22 @@ void OnTick()
       });
       ctx.fillText(liveFormatted, plotWidth + (priceAxisWidth - 6) / 2 + 2, liveY + 3.5);
 
-      // Handle Crosshair On Hover
       if (mousePos.active && mousePos.x < plotWidth && mousePos.y < plotHeight) {
         ctx.strokeStyle = '#94a3b8';
         ctx.setLineDash([2, 2]);
         ctx.lineWidth = 0.8;
 
-        // Vertical crosshair
         ctx.beginPath();
         ctx.moveTo(mousePos.x, 0);
         ctx.lineTo(mousePos.x, plotHeight);
         ctx.stroke();
 
-        // Horizontal crosshair
         ctx.beginPath();
         ctx.moveTo(0, mousePos.y);
         ctx.lineTo(plotWidth, mousePos.y);
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // Hover Price Tag
         const hoverPrice = getPriceFromY(mousePos.y);
         ctx.fillStyle = '#1e293b';
         ctx.beginPath();
@@ -1711,7 +1681,6 @@ void OnTick()
         ctx.textAlign = 'center';
         ctx.fillText(hoverPrice.toLocaleString(undefined, { minimumFractionDigits: ASSETS[currentAsset].decimals }), plotWidth + (priceAxisWidth - 6) / 2 + 2, mousePos.y + 3);
 
-        // Hover Time Tag
         const hoverIdx = Math.floor(mousePos.x / candleSlot);
         if (candles[hoverIdx]) {
           const hoverTimeStr = formatTimeByTZ(candles[hoverIdx].time);
@@ -1729,7 +1698,6 @@ void OnTick()
       }
     }
 
-    // Live Tick Price Simulation
     function startPriceSimulation() {
       setInterval(() => {
         const asset = ASSETS[currentAsset];
@@ -1740,14 +1708,9 @@ void OnTick()
         document.getElementById('chartLivePrice').innerText = formatted;
         
         if (currentAsset === 'XAUUSD') document.getElementById('ticker-xau').innerText = formatted;
-        if (currentAsset === 'EURUSD') {
-          document.getElementById('ticker-eur').innerText = formatted;
-          const dup = document.getElementById('ticker-eur-dup');
-          if (dup) dup.innerText = formatted;
-        }
-        if (currentAsset === 'BTCUSD') document.getElementById('ticker-btc').innerText = formatted;
+        if (currentAsset === 'EURUSD') document.getElementById('ticker-eur').innerText = formatted;
+        if (currentAsset === 'GBPUSD') document.getElementById('ticker-gbp').innerText = formatted;
 
-        // Mutate last candle
         if (candles.length > 0) {
           const last = candles[candles.length - 1];
           last.close = asset.price;
@@ -1758,7 +1721,6 @@ void OnTick()
       }, 1400);
     }
 
-    // Chatbot Drawer Logic
     let isChatOpen = false;
     function toggleChatDrawer() {
       const drawer = document.getElementById('chatDrawer');
@@ -1799,14 +1761,14 @@ void OnTick()
       if (sender === 'user') {
         msgDiv.className = "flex items-start justify-end space-x-2";
         msgDiv.innerHTML = `
-          <div class="bg-blue-600 text-white p-2.5 rounded-xl rounded-tr-none text-xs leading-relaxed max-w-[85%] shadow-md">
+          <div class="bg-cyan-600 text-white p-2.5 rounded-xl rounded-tr-none text-xs leading-relaxed max-w-[85%] shadow-md">
             ${escapeHTML(text)}
           </div>
         `;
       } else {
         msgDiv.className = "flex items-start space-x-2";
         msgDiv.innerHTML = `
-          <div class="w-6 h-6 rounded bg-blue-600/30 text-blue-400 flex-shrink-0 flex items-center justify-center border border-blue-500/30 text-[10px] font-bold">
+          <div class="w-6 h-6 rounded bg-cyan-600/30 text-cyan-400 flex-shrink-0 flex items-center justify-center border border-cyan-500/30 text-[10px] font-bold">
             AI
           </div>
           <div class="themed-input p-2.5 rounded-xl rounded-tl-none border text-slate-200 leading-relaxed max-w-[85%]">
@@ -1833,18 +1795,18 @@ void OnTick()
       }
 
       if (q.includes('repainting') || q.includes('itime') || q.includes('tick')) {
-        return `<strong>Why iTime Check Matters:</strong><br>In standard MQL5, <code class="text-cyan-400">OnTick()</code> executes on every single price tick (up to 50 times/sec). Without checking <code class="text-cyan-400">iTime(_Symbol, _Period, 0)</code>, indicators fluctuate inside the unclosed candle, causing false breakout entries (tick repainting). QuantAI enforces bar-close verification: trades only trigger when the previous bar is finalized.`;
+        return `<strong>Why iTime Check Matters:</strong><br>In standard MQL5, <code class="text-cyan-400">OnTick()</code> executes on every single price tick (up to 50 times/sec). Without checking <code class="text-cyan-400">iTime(_Symbol, _Period, 0)</code>, indicators fluctuate inside the unclosed candle, causing false breakout entries (tick repainting). VortexQuant enforces bar-close verification: trades only trigger when the previous bar is finalized.`;
       }
       
       if (q.includes('stoploss') || q.includes('sl') || q.includes('gold') || q.includes('xau')) {
         return `<strong>XAUUSD M15 SL/TP Optimization:</strong><br>On Spot Gold, Average True Range (ATR 14) typically fluctuates between 12 to 22 pips. Recommended baseline:<br>• <strong>Stop Loss</strong>: 1.5x ATR (~250-300 points) below Asian liquidity low.<br>• <strong>Take Profit</strong>: 2.5x to 3.0x ATR (~500-750 points).<br>• <strong>Risk Cap</strong>: Keep risk strictly $\\le 1.5\\%$ of account equity using our dynamic lot calculator.`;
       }
 
-      if (q.includes('timezone') || q.includes('time') || q.includes('est') || q.includes('ist')) {
-        return `<strong>Timezone Synchronization:</strong><br>You can switch the chart between <strong>EST (New York Session)</strong>, <strong>UTC (London/Broker time)</strong>, and <strong>IST (Local India Time)</strong> using the toggle above the chart. The Forex Factory calendar automatically adjusts event release times accordingly!`;
+      if (q.includes('smc') || q.includes('liquidity') || q.includes('bos') || q.includes('fvg')) {
+        return `<strong>Smart Money Concepts (SMC) Architecture:</strong><br>VortexQuant automatically traces institutional liquidity sweeps across Session Highs and Asian Ranges. Once Buy-Side Liquidity (BSL) is purged, the EA waits for an M15 Market Structure Shift (MSS/CHoCH) and executes on the 50% Fair Value Gap (FVG) retest.`;
       }
 
-      return `<strong>Analysis for "${escapeHTML(query)}":</strong><br>QuantAI evaluated your prompt through the LangGraph State machine. The current confluence score on ${currentAsset} is <strong>${ASSETS[currentAsset].bias}</strong>. You can load this directly into the Strategy Specification panel on the left and hit <em>'Generate Compilable MQL5 EA'</em> to produce production-ready code.`;
+      return `<strong>Analysis for "${escapeHTML(query)}":</strong><br>VortexQuant evaluated your prompt through the LangGraph State machine. The current confluence score on ${currentAsset} is <strong>${ASSETS[currentAsset].bias}</strong>. You can load this directly into the Strategy Specification panel on the left and hit <em>'Generate Compilable MQL5 EA'</em> to produce production-ready code.`;
     }
   </script>
 </body>
